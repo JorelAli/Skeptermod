@@ -1,4 +1,4 @@
-package com.droppages.Skepter.Utils;
+package com.droppages.Skepter.New;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
-import com.droppages.Skepter.Utils.ReflectionUtil.DynamicPackage;
-import com.droppages.Skepter.Utils.ReflectionUtil.FieldEntry;
+import com.droppages.Skepter.New.ReflectionUtil.DynamicPackage;
+import com.droppages.Skepter.New.ReflectionUtil.FieldEntry;
  
 /**
  * ParticleEffect Library v1.2

@@ -1,4 +1,4 @@
-package com.droppages.Skepter.Listeners;
+package com.droppages.Skepter.New;
 
 import java.util.List;
 
@@ -15,7 +15,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 import com.droppages.Skepter.Main.Skeptermod;
-import com.droppages.Skepter.Utils.ParticleEffect;
 
 public class SkepterListener implements Listener {
 

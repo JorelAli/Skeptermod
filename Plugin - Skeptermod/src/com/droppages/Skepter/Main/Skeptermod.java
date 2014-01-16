@@ -27,13 +27,21 @@ import com.droppages.Skepter.Listeners.FireBowListener;
 import com.droppages.Skepter.Listeners.GodswordListener;
 import com.droppages.Skepter.Listeners.HealingswordListener;
 import com.droppages.Skepter.Listeners.HellSwordListener;
-import com.droppages.Skepter.Listeners.SkepterListener;
 import com.droppages.Skepter.Listeners.WarhammerListener;
 import com.droppages.Skepter.Listeners.WitherBowListener;
-
+import com.droppages.Skepter.New.SkepterListener;
 
 public class Skeptermod extends JavaPlugin {
 
+	/*
+	 * Skeptermod. My first ever bukkit plugin.
+	 * This plugin first started off with the WitherBow, but then after
+	 * experimenting more with the BukkitAPI, everything else has evolved.
+	 * Things in the com.droppages.Skepter.New package is everything else which I have added
+	 * since I 'abandoned' the project. It has been revived for testing purposes and further
+	 * development with the BukkitAPI.
+	 */
+	
 	Logger log = Logger.getLogger("Minecraft");
 
 	public void onEnable() {
