@@ -18,10 +18,15 @@ import com.droppages.Skepter.Main.Skeptermod;
 
 public class SkepterListener implements Listener {
 
+	/*
+	 * No, I'm not being crazily OP in this class, I'm just...
+	 * experimenting with the features I'd love to have XD
+	 * 
+	 * And of course, using the features I learn here in other plugins.
+	 */
 	Skeptermod plugin;
 	public SkepterListener(Skeptermod plugin) {
 		this.plugin = plugin;
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 
 	@EventHandler

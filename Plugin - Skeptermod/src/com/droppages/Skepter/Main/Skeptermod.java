@@ -29,7 +29,6 @@ import com.droppages.Skepter.Listeners.HealingswordListener;
 import com.droppages.Skepter.Listeners.HellSwordListener;
 import com.droppages.Skepter.Listeners.WarhammerListener;
 import com.droppages.Skepter.Listeners.WitherBowListener;
-import com.droppages.Skepter.New.SkepterListener;
 
 public class Skeptermod extends JavaPlugin {
 
@@ -45,6 +44,9 @@ public class Skeptermod extends JavaPlugin {
 	Logger log = Logger.getLogger("Minecraft");
 
 	public void onEnable() {
+		
+		new com.droppages.Skepter.New.NewSkeptermod(this); //The only new code (excepting top bit) which will be in this class.
+		
 		PluginDescriptionFile description = this.getDescription();
 		log = getLogger();
 		// Item Listeners
@@ -59,7 +61,6 @@ public class Skeptermod extends JavaPlugin {
 		new ChaosChimeraListener(this);
 		new ChaosLightningListener(this);
 		new HellSwordListener(this);
-		new SkepterListener(this);
 		// Commands
 		getCommand("skeptermod").setExecutor(new SkeptermodCommand(this));
 		getCommand("smexplode").setExecutor(new ExplodeCommand(this));
