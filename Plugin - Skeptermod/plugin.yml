@@ -1,0 +1,112 @@
+name: Skeptermod
+main: com.droppages.Skepter.Main.Skeptermod
+version: [1.8]
+author: Skepter
+description: Allows you to utilise Skepter's modifications
+
+commands:
+  sm:
+    description: displays information about the Skeptermod
+    aliases: [skeptermod, skepmod]
+    usage: Use '/sm'
+  smexplode:
+    description: explodes at your location with a specific radius
+    aliases: [sme, skeptermodexplode, skepmodexplode]
+    permission: skeptermod.usecommand.smexplode
+    usage: Use '/smexplode <size>'
+  smlightning:
+    description: Strikes lightning depending where you look
+    aliases: [sml, skeptermodlightning, skepmodlightning]
+    permission: skeptermod.usecommand.smlightning
+    usage: Use '/smlightning <amount>'
+  smclear:
+    description: Removes all item entities
+    aliases: [smc, skeptermodclear, skepmodclear]
+    permission: skeptermod.usecommand.smclear
+    usage: Use '/smclear'
+  smclearx:
+    description: Removes all item entities from console
+    usage: smclearx
+  smmob:
+    description: Spawns custom mobs
+    permission: skeptermod.usecommand.smmob
+    usage: Use '/smmob <mob>'
+  smgive:
+    description: Gives Skeptermod items
+    aliases: [smg, skeptermodgive, skepmodgive]
+    permission: skeptermod.usecommand.smgive
+  smrecipe:
+    description: Displays Recipes
+    aliases: [smr, skeptermodrecipe, skepmodrecipe]
+    
+permissions:
+  skeptermod.*:
+    description: Gives access to all of the Skeptermod powers
+    children:
+      skeptermod.useitem.witherbow: true
+      skeptermod.useitem.firebow: true
+      skeptermod.useitem.godsword: true
+      skeptermod.useitem.destinydiamond: true
+      skeptermod.useitem.healingsword: true
+      skeptermod.useitem.warhammer: true
+      skeptermod.useitem.chaoschimera: true
+      skeptermod.useitem.chaosemerald: true
+      skeptermod.useitem.chaoslightning: true
+      skeptermod.useitem.chaosspeed: true
+      skeptermod.useitem.hellsword: true
+      skeptermod.usecommand.sm: true
+      skeptermod.usecommand.smclear: true
+      skeptermod.usecommand.smmob: true
+      skeptermod.usecommand.smexplode: true
+      
+  skeptermod.useitem.witherbow:
+    description: Gives access to Witherbow
+    default: op
+  skeptermod.useitem.firebow:
+    description: Gives access to Firebow
+    default: op
+  skeptermod.useitem.godsword:
+    description: Gives access to The Sword of the Gods
+    default: op
+  skeptermod.useitem.destinydiamond:
+    description: Gives access to The Diamond of Destiny
+    default: op
+  skeptermod.useitem.healingsword:
+    description: Gives access to Healingsword
+    default: op
+  skeptermod.useitem.warhammer:
+    description: Gives access to Warhammer
+    default: op
+  skeptermod.useitem.chaoschimera:
+    description: Gives access to Chimera Chaos Emerald
+    default: op
+  skeptermod.useitem.chaosemerald:
+    description: Gives access to Chaos Emerald
+    default: op
+  skeptermod.useitem.chaoslightning:
+    description: Gives access to lightning Chaos Emerald
+    default: op
+  skeptermod.useitem.chaosspeed:
+    description: Gives access to HyperSpeed Chaos Emerald
+    default: op
+  skeptermod.useitem.hellsword:
+    description: Gives access to The Sword from Hell
+    default: op
+  skeptermod.usecommand.smexplode:
+    description: Gives access to smexplode command
+    default: op
+  skeptermod.usecommand.sm:
+    description: Gives access to sm command
+    default: op
+  skeptermod.usecommand.smmob:
+    description: Gives access to smmob command
+    default: op
+  skeptermod.usecommand.smclear:
+    description: Gives access to smclear command
+    default: op
+  skeptermod.usecommand.smgive:
+    description: Gives access to smgive command
+    default: op
+  skeptermod.usecommand.smrecipe:
+    description: Gives access to smrecipe command
+    default: op
