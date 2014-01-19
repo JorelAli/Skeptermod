@@ -29,6 +29,8 @@ import com.droppages.Skepter.Listeners.HealingswordListener;
 import com.droppages.Skepter.Listeners.HellSwordListener;
 import com.droppages.Skepter.Listeners.WarhammerListener;
 import com.droppages.Skepter.Listeners.WitherBowListener;
+import com.droppages.Skepter.New.SkepterListener;
+import com.droppages.Skepter.New.TabCompleteCommandTest;
 
 public class Skeptermod extends JavaPlugin {
 
@@ -45,7 +47,7 @@ public class Skeptermod extends JavaPlugin {
 
 	public void onEnable() {
 		
-		new com.droppages.Skepter.New.NewSkeptermod(this); //The only new code (excepting top bit) which will be in this class.
+		//new com.droppages.Skepter.New.NewSkeptermod(); //The only new code (excepting top bit) which will be in this class.
 		
 		PluginDescriptionFile description = this.getDescription();
 		log = getLogger();
@@ -62,6 +64,9 @@ public class Skeptermod extends JavaPlugin {
 		new ChaosLightningListener(this);
 		new HellSwordListener(this);
 		// Commands
+		getCommand("gmtabcompletetest").setTabCompleter(new TabCompleteCommandTest());
+		getServer().getPluginManager().registerEvents(new SkepterListener(this), this);
+
 		getCommand("skeptermod").setExecutor(new SkeptermodCommand(this));
 		getCommand("smexplode").setExecutor(new ExplodeCommand(this));
 		getCommand("smlightning").setExecutor(new LightningCommand(this));

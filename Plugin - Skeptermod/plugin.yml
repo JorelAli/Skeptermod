@@ -38,6 +38,9 @@ commands:
   smrecipe:
     description: Displays Recipes
     aliases: [smr, skeptermodrecipe, skepmodrecipe]
+  gmtabcompletetest:
+    description: erm
+    usage : use command mate
     
 permissions:
   skeptermod.*:

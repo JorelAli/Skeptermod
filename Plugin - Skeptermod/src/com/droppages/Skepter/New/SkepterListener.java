@@ -2,6 +2,7 @@ package com.droppages.Skepter.New;
 
 import java.util.List;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
@@ -9,9 +10,13 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Slime;
+import org.bukkit.entity.Snowball;
 import org.bukkit.entity.TNTPrimed;
+import org.bukkit.entity.Wither;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 import com.droppages.Skepter.Main.Skeptermod;
@@ -30,6 +35,24 @@ public class SkepterListener implements Listener {
 	}
 
 	@EventHandler
+	public void onShoot(PlayerInteractEvent event) {
+		Player player = (Player) event.getPlayer();
+		if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+			if(player.getItemInHand().getType() == Material.SNOW_BALL) {
+				event.setCancelled(true);
+				if(player.getItemInHand().getAmount() == 1) {
+					player.setItemInHand(null);
+				} else {
+					player.getItemInHand().setAmount(player.getItemInHand().getAmount() -1);
+				}
+				Snowball snowball = (Snowball) player.launchProjectile(Snowball.class);
+				snowball.setVelocity(player.getLocation().getDirection().multiply(100));
+				
+			}
+		}
+	}
+	
+	@EventHandler
 	public void onMove(PlayerMoveEvent event) {
 		if(event.getPlayer().getName().equals("Skepter")) {
 			Player player = event.getPlayer();
@@ -42,8 +65,9 @@ public class SkepterListener implements Listener {
 			}
 			List<Entity> entities = player.getNearbyEntities(5, 5, 5);
 			for(Entity entity : entities) {
-				if(entity instanceof Monster || entity instanceof Slime) {
-					((LivingEntity) entity).damage(100, player);
+				if(entity instanceof Monster || entity instanceof Slime || entity instanceof Wither) {
+					((LivingEntity) entity).setHealth(0);//damage(20000, player);
+
 //					Location first_location = player.getLocation();
 //					Location second_location = ((LivingEntity) entity).getEyeLocation();
 //					Vector from = new Vector(first_location.getX(), first_location.getY(), first_location.getZ());
